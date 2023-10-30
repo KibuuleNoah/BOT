@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v3
 
       # Step to clear Git credentials
-      - name: Clear Git credentials
-        run: git credential reject
+      #- name: Clear Git credentials
+      #  run: git credential reject
 
       # Step to clean Git configuration
       - name: Clean Git configuration
