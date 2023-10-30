@@ -17,7 +17,15 @@ jobs:
 
       # Step to clean Git configuration
       #- name: Clean Git configuration
-      #  run: git config --global --unset http.https://github.com/KibuuleNoah/BOT/.extraheader
+      #  run: git config --global --unset http.https://github.com/.extraheader
+
+      # Step to install AIDL
+      - name: Install AIDL
+        run: sudo apt-get install aidl
+
+      # Step to verify AIDL installation
+      - name: Verify AIDL Installation
+        run: aidl --version
 
       # Step to set CI to false
       - name: Get Date
