@@ -24,8 +24,8 @@ jobs:
         run: sudo apt-get install aidl
 
       # Step to verify AIDL installation
-      - name: Verify AIDL Installation
-        run: aidl --version
+      #- name: Verify AIDL Installation
+      #  run: aidl --version
 
       # Step to set CI to false
       - name: Get Date
