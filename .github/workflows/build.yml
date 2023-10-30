@@ -1,7 +1,8 @@
 name: CI
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -10,7 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # used to cache dependencies with a timeout
+      # Step to clear Git credentials
+      - name: Clear Git credentials
+        run: git credential reject
+
+      # Step to clean Git configuration
+      - name: Clean Git configuration
+        run: git config --global --unset http.https://github.com/.extraheader
+
+      # Step to set CI to false
       - name: Get Date
         id: get-date
         run: |
@@ -22,7 +31,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: .buildozer_global
-          key: buildozer-global-${{ hashFiles('buildozer.spec') }} # Replace with your path
+          key: buildozer-global-${{ hashFiles('buildozer.spec') }}
 
       - uses: actions/cache@v3
         with:
