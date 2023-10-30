@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Workflow
+title = MyTable
 
 # (str) Package name
-package.name = Workflow
+package.name = MyTable
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.kivymd
@@ -22,7 +22,7 @@ source.dir = .
 #icon.filename = %(source.dir)s/assets/images/logo.png
 
 # (string) Presplash background color (for new android toolchain)
-android.presplash_color = #000000
+android.presplash_color = #00ff00
 
 # (list) Source files to include (let empty to include all the files)
 #source.include_exts = py, gif, png, jpg, jpeg, ttf, kv, json, txt, md
@@ -37,7 +37,7 @@ version = 0.0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3, kivy==master, https://github.com/kivymd/KivyMD/archive/master.zip,plyer
+requirements = python==3.9.7, kivy==2.0.0, kivymd==1.1.1,pillow==9.5.0,
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
